@@ -8,7 +8,7 @@ interface Todo {
   completed: boolean;
 }
 
-axios.get(url).then(response => {
+axios.get(url).then((response) => {
   const todo = response.data as Todo;
 
   const id = todo.id;
@@ -24,4 +24,4 @@ const logTodo = (id: number, title: string, completed: boolean) => {
     Has a title of: ${title}
     Is it finished? ${completed}
   `);
-}
+};

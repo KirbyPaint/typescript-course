@@ -14,9 +14,7 @@ let myNumbers: number[] = [1, 2, 3];
 let truths: boolean[] = [true, true, false];
 
 // Classes
-class Car {
-
-}
+class Car {}
 let car: Car = new Car();
 
 // Object literal
@@ -28,7 +26,7 @@ let point: { x: number; y: number } = {
 // Function
 const logNumber: (i: number) => void = (i: number) => {
   console.log('i: ', i);
-}
+};
 
 // When to use Annotations
 // 1. Function returns 'any' type
