@@ -1,7 +1,6 @@
-interface Vehicle {
-  name: string;
-  year: Date;
-  broken: boolean;
+// An interface will allow objects with extra params
+// but it FORCES the object to have properties as listed
+interface Reportable {
   summary(): string;
 }
 
@@ -14,8 +13,8 @@ const oldCivic = {
   },
 };
 
-const printVehicle = (vehicle: Vehicle) => {
-  console.log(vehicle.summary());
+const printSummary = (item: Reportable) => {
+  console.log(item.summary());
 };
 
-printVehicle(oldCivic);
+printSummary(oldCivic);
