@@ -1,4 +1,4 @@
-import { MatchReader } from './MatchReader';
+import { MatchReader } from './inheritance/MatchReader';
 import { dateStringToDate } from './utils';
 import { MatchResult } from './MatchResult';
 
