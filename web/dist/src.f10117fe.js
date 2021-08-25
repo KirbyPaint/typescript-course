@@ -138,6 +138,8 @@ var User = function () {
     Object.assign(this.data, update);
   };
 
+  User.prototype.on = function (eventName, callback) {};
+
   return User;
 }();
 
