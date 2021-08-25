@@ -134,6 +134,10 @@ var User = function () {
     return this.data[propName];
   };
 
+  User.prototype.set = function (update) {
+    Object.assign(this.data, update);
+  };
+
   return User;
 }();
 
@@ -151,9 +155,9 @@ Object.defineProperty(exports, "__esModule", {
 
 var user_1 = require("./models/user");
 
-var user = new user_1.User({
-  name: "name",
-  age: 20
+var user = new user_1.User({});
+user.set({
+  name: "newName"
 });
 console.log(user.get("name"));
 console.log(user.get("age"));
