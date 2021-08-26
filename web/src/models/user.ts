@@ -7,6 +7,8 @@ interface UserProps {
 }
 
 export class User {
+  events: Eventing = new Eventing();
+
   constructor(private data: UserProps) {}
 
   get(propName: string): number | string {
@@ -30,7 +32,6 @@ export class User {
     if (id) {
       axios.put(`http://localhost:3000/users/${id}`, this.data);
     } else {
-      // post
       axios.post("http://localhost:3000/users", this.data);
     }
   }

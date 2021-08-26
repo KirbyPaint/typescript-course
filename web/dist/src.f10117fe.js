@@ -1936,6 +1936,7 @@ var axios_1 = __importDefault(require("axios"));
 var User = function () {
   function User(data) {
     this.data = data;
+    this.events = new Eventing();
   }
 
   User.prototype.get = function (propName) {
@@ -1960,7 +1961,6 @@ var User = function () {
     if (id) {
       axios_1.default.put("http://localhost:3000/users/" + id, this.data);
     } else {
-      // post
       axios_1.default.post("http://localhost:3000/users", this.data);
     }
   };
@@ -2015,7 +2015,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59886" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60628" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
